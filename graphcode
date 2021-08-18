@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+
+X = []
+Y = []
+
+def xvalue(X):
+    x = float(input("X값을 입력해주세요.: "))
+    X.append(x)
+
+def yvalue(Y):
+    y = float(input("Y값을 입력해주세요.: "))
+    Y.append(y)
+
+xvalue(X)
+yvalue(Y)
+
+ans=int(input("입력을 이어가시겠습니까? [1. 네 2. 아니오]: "))
+
+while ans != 2:
+    xvalue(X)
+    yvalue(Y)
+    ans = int(input("입력을 이어가시겠습니까? [1. 네 2. 아니오]: "))
+
+plt.plot(X,Y)
+plt.show()
